@@ -14,7 +14,7 @@ export class TechnicService {
     findOne(id: number) {
         return this.DatasourceService
             .getTechnic()
-            .find((technic) => technic.TechnicId === id);
+            .find((technic) => technic.id === id);
     }
     
     findAll(): Technic[] {
@@ -24,7 +24,7 @@ export class TechnicService {
     update(id: number, updateTechnic: Technic) {
         const index = this.DatasourceService
           .getTechnic()
-          .findIndex((technic) => technic.TechnicId === id);
+          .findIndex((technic) => technic.id === id);
         this.DatasourceService.getTechnic()[index] = updateTechnic;
         return this.DatasourceService.getTechnic()[index];
     }
@@ -32,7 +32,7 @@ export class TechnicService {
     remove(id: number) {
         const index = this.DatasourceService
           .getTechnic()
-          .findIndex((technic) => technic.TechnicId === id);
+          .findIndex((technic) => technic.id === id);
         this.DatasourceService.getTechnic().splice(index, 1);
         
         return HttpStatus.OK;

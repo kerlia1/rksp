@@ -1,6 +1,7 @@
 import { HttpStatus, Injectable } from "@nestjs/common";
 import { DatasourceService } from '../datasource/datasource.service';
 import { Product } from "./product.entity";
+import { PassThrough } from "stream";
 
 @Injectable ()
 export class ProductService {
@@ -37,4 +38,9 @@ export class ProductService {
         
         return HttpStatus.OK;
     }
+
+    findIncomplete(){
+        
+    }
+
 }

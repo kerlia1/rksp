@@ -30,13 +30,3 @@ export class Product{
 
     
 }
-
-/* Example
-
-{
-"ProductId": 0,
-"ProductName": "Что-то",
-"ProductQuantity": 10
-}
-
-*/

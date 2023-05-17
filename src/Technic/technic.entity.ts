@@ -13,10 +13,15 @@ export class Technic {
     id: number;
 
     @Column()
+    TechnicType: string;
+
+    @Column()
     TechnicName: string;
 
     @Column()
     specialization: string;
+
+
 
     @ManyToMany((type) => Product, (product) => product.technics)
 

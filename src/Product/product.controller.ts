@@ -10,6 +10,12 @@ export class ProductController {
     findAll() {
         return this.productService.findAll();
     }
+
+    @Get('incomplete')
+    findIncomplete() {
+        this.productService.findIncomplete();
+      }
+
     
     @Get(':id')
     findOne(@Param('id') id: number) {

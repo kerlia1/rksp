@@ -17,7 +17,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
           host: 'localhost',
           synchronize: false,
           logging: 'all',
-          entities: ['./Product/product.entity.ts'],
+          entities: ['dist/**/*.entity{.ts,.js}'],
         })],
   controllers: [],
   providers: [],
