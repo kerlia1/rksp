@@ -22,8 +22,8 @@ export class Technic {
 
     @JoinTable({
         name: 'product_technic',
-        joinColumn: { name: 'technic_id' },
-        inverseJoinColumn: { name: 'product_id' },
+        joinColumn: { name: 'technic_type' },
+        inverseJoinColumn: { name: 'product_type' },
       })
     technics: Technic[];
 }
