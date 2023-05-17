@@ -1,9 +1,32 @@
-export class Technic{
-    TechnicId: number;
-    TechnicName: string;
-    TechnicQuantity: number;
-}
+import { Product } from "src/Product/product.entity";
+import {
+    Column,
+    Entity,
+    JoinTable,
+    ManyToMany,
+    PrimaryGeneratedColumn,
+} from 'typeorm';
 
+@Entity('technics')
+export class Technic {
+    @PrimaryGeneratedColumn()
+    id: number;
+
+    @Column()
+    TechnicName: string;
+
+    @Column()
+    specialization: string;
+
+    @ManyToMany((type) => Product, (product) => product.technics)
+
+    @JoinTable({
+        name: 'product_technic',
+        joinColumn: { name: 'technic_id' },
+        inverseJoinColumn: { name: 'product_id' },
+      })
+    technics: Technic[];
+}
 /* Example
 
 {

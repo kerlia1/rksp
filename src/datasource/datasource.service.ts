@@ -12,7 +12,7 @@ export class DatasourceService {
   getProduct(): Product[] {
     return this.products;
   }
-  
+
   getTechnic() : Technic[]{
     return this.technics;
   }
