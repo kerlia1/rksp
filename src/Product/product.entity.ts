@@ -34,3 +34,4 @@ export class Product{
     brands : Technic[]; // объект, в котором будем автоматически получать бренды техники
 
 }
+// last commit
