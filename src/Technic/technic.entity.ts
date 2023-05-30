@@ -13,24 +13,25 @@ export class Technic {
     id: number;
 
     @Column()
-    TechnicType: string;
+    type: string;
 
     @Column()
-    TechnicName: string;
+    name: string;
 
     @Column()
     specialization: string;
 
+    @Column()
+    brand : number;
 
-
-    @ManyToMany((type) => Product, (product) => product.technics)
+    @ManyToMany((type) => Product, (product) => product.brands)
 
     @JoinTable({
         name: 'product_technic',
-        joinColumn: { name: 'technic_type' },
-        inverseJoinColumn: { name: 'product_type' },
+        joinColumn: { name: 'technic_brand' },
+        inverseJoinColumn: { name: 'product_brand' },
       })
-    technics: Technic[];
+    brands: Product[];
 }
 /* Example
 

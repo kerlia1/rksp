@@ -1,5 +1,4 @@
-export class IncompleteTechnicDto {
-    id: number;
+export class IncompleteProductDto {
     type: string;
     quantity: number;
 }

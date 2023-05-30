@@ -1,3 +1,4 @@
+import { CreateTechnicDto } from "./DTO/CreateTechnicDTO";
 import { Technic } from "./technic.entity";
 import { TechnicService } from "./technic.service";
 import { Body, Controller, Delete, Get, Param, Post, Put } from "@nestjs/common"
@@ -22,7 +23,7 @@ export class TechnicController {
     }
     
     @Post()
-    create(@Body() createTechnic: Technic) {
+    create(@Body() createTechnic: CreateTechnicDto) {
         return this.technicService.create(createTechnic);
     }
     
